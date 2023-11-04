@@ -1,0 +1,18 @@
+{
+    "name": "poychamp/pdf-image-to-text",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Leoncio Cesar Polestico"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "spatie/pdf-to-image": "^1.2",
+        "thiagoalessio/tesseract_ocr": "^2.13"
+    }
+}
