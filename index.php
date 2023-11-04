@@ -35,6 +35,9 @@ try {
     $success = false;
     $content = $e->getMessage();
 } finally {
+    unlink($pdfPath);
+    unlink($imagePath);
+
     header('HTTP/1.1 200 OK');
 
     echo json_encode([
