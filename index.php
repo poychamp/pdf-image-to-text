@@ -14,7 +14,9 @@ if ($method != 'POST') {
     exit;
 }
 
-require_once "./vendor/autoload.php";
+$basePath = dirname(__FILE__);
+
+require_once "{$basePath}/vendor/autoload.php";
 
 function downloadFile($url, $path)
 {
@@ -37,8 +39,8 @@ function downloadFile($url, $path)
 }
 
 $fileUrl = $_POST['file_url'];
-$pdfPath = "{$_SERVER['DOCUMENT_ROOT']}/temp/temp.pdf";
-$imagePath = "{$_SERVER['DOCUMENT_ROOT']}/temp/temp.png";
+$pdfPath = "{$basePath}/temp/temp.pdf";
+$imagePath = "{$basePath}/temp/temp.png";
 
 
 downloadFile($fileUrl, $pdfPath);
